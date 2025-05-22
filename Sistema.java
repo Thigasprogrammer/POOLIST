@@ -6,7 +6,7 @@ public class Sistema {
 		Scanner teclado = new Scanner(System.in);
 		ArrayList<Circulo> lst_circulos = new ArrayList<Circulo>();
 
-		double raio;
+		double raio = 0;
 		while(raio != -1){
 			System.out.print("digite o valor da coordenada x do centro: ");
 			double x = teclado.nextDouble();
@@ -18,7 +18,7 @@ public class Sistema {
 			
 
 			Ponto coord_centro = new Ponto(x, y); //define o objeto ponto, o centro desse circulo em questão
-			Circulo circulo = new Circulo(coord_centro, raio);
+			Circulo circulo = new Circulo(raio, coord_centro);
 
 			lst_circulos.add(circulo);
 		}//while
